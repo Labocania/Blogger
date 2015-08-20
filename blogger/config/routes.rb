@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
  root to: 'articles#index'
- resources :articles
+ resources :articles do
+ 	resources :comments
+ end
   #Prefix       Verb   URI Pattern                  Controller#Action
   #articles     GET    /articles(.:format)          articles#index
   #             POST   /articles(.:format)          articles#create
